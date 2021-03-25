@@ -1,11 +1,11 @@
 
-<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! What's up...</h1>
+<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Que bom que você veio até aqui!</h1>
 
-### Python Dev | Data Scientist |  DevOps 
+### Cientista de dados | Analista de dados |  Dev Python 
 
 <!-- **uannabi/uannabi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. -->
 
-I want to make difference and willing to work hard for skillful career rather than regular career that I can be satisfied for. I want to work hard, be responsible and improve my profession and skills with a reputed organization in an ethical way in order to accept challenges & I’ve completed my graduation from CSE year of 2016.
+Formado em análise e desenvolvimento de sistemas, possuo experiência sólida na linguagem de programação Python, meu foco atuar como cientista de dados, aplicando técnicas de Inteligência Artificial, análise estatística de dados, reconhecimento de padrões e visualização de dados.
 <br>
 <img align="right" src="https://github.com/uannabi/-/blob/master/resource/HelloWorld.gif" width="400px" />
 
