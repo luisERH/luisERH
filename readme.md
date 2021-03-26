@@ -1,9 +1,7 @@
 
-<h1><img src="https://github.com/luisERH/ImageCloud/blob/main/wordcloud.png" width="30"/> Que bom que você veio até aqui!</h1>
+<h1>:facepunch: Que bom que você veio até aqui!</h1>
 
 ### Cientista de dados | Analista de dados |  Dev Python 
-
-<!-- **uannabi/uannabi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. -->
 
 Formado em análise e desenvolvimento de sistemas, possuo experiência sólida na linguagem de programação Python, meu foco atuar como cientista de dados, aplicando técnicas de Inteligência Artificial, análise estatística de dados, reconhecimento de padrões e visualização de dados.
 <br>
@@ -81,8 +79,8 @@ Formado em análise e desenvolvimento de sistemas, possuo experiência sólida n
 
 <strong>🔭 you can start from here ...</strong>
 
-<a href="https://github.com/uannabi/SparkDataFrame"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=uannabi&repo=SparkDataFrame" width=400> </a> 
-<a href="https://github.com/uannabi/DesignPatterns"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=uannabi&repo=DesignPatterns" width=400> </a> 
+<a href="https://github.com/luisERH/Dominando-Pandas"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=luisERH&repo=Dominando-Pandas" width=400> </a> 
+<a href="https://github.com/luisERH/Analise-de-Twitters"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=luisERH&repo=Analise-de-Twitters" width=400> </a> 
 
 <!-- - 😄 Pronouns: ...
 - ⚡ Fun fact: ... -->
@@ -91,7 +89,7 @@ Formado em análise e desenvolvimento de sistemas, possuo experiência sólida n
 <p align="center">
 <summary>:zap: Github Stats</summary>
 
-<img src="https://github-readme-stats.codestackr.vercel.app/api?username=luiserh&show_icons=true" />
+<img src="https://github-readme-stats.codestackr.vercel.app/api?username=luisERH&show_icons=true" />
 </p>
 
 
