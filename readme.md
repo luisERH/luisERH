@@ -7,7 +7,7 @@
 
 Formado em análise e desenvolvimento de sistemas, possuo experiência sólida na linguagem de programação Python, meu foco atuar como cientista de dados, aplicando técnicas de Inteligência Artificial, análise estatística de dados, reconhecimento de padrões e visualização de dados.
 <br>
-<img align="right" src="https://github.com/luisERH/ImageCloud/blob/main/wordcloud.png" width="400px" />
+<img align="right" src="https://github.com/luisERH/ImageCloud/blob/main/wordcloud.png" width="28%" />
 
 - 🔭 Atualmente estuando PySpark.
 - 🌱 Procuro me especializar em NLP.
@@ -91,7 +91,7 @@ Formado em análise e desenvolvimento de sistemas, possuo experiência sólida n
 <p align="center">
 <summary>:zap: Github Stats</summary>
 
-<img src="https://github-readme-stats.codestackr.vercel.app/api?username=uannabi&show_icons=true" />
+<img src="https://github-readme-stats.codestackr.vercel.app/api?username=luiserh&show_icons=true" />
 </p>
 
 
