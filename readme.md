@@ -7,10 +7,10 @@ Formado em análise e desenvolvimento de sistemas, possuo experiência sólida n
 <br>
 <img align="right" src="https://github.com/luisERH/ImageCloud/blob/main/wordcloud.png" width="28%" />
 
-- 🔭 Atualmente estuando PySpark.
+- 🔭 Atualmente estudando PySpark.
 - 🌱 Procuro me especializar em NLP.
 - 💬 Me adapto paara novas demandas.
-- 📫 Como falar comigo?: [luiseduardorocha.h@gmail.com](luiseduardorocha.h@gmail.com)
+- 📫 Como entrar em contato: [luiseduardorocha.h@gmail.com](luiseduardorocha.h@gmail.com)
 
 
 [<img src="https://github.com/uannabi/-/blob/master/resource/social/linkedin-ar21.svg" height="50em" align="center" alt="Siga Luis no LinkedIn"/>](https://www.linkedin.com/in/luiserh/) 
