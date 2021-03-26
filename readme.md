@@ -7,7 +7,7 @@
 
 Formado em análise e desenvolvimento de sistemas, possuo experiência sólida na linguagem de programação Python, meu foco atuar como cientista de dados, aplicando técnicas de Inteligência Artificial, análise estatística de dados, reconhecimento de padrões e visualização de dados.
 <br>
-<img align="right" src="https://github.com/uannabi/-/blob/master/resource/HelloWorld.gif" width="400px" />
+<img align="right" src="https://github.com/luisERH/ImageCloud/blob/main/wordcloud.png" width="400px" />
 
 - 🔭 I’m currently working on ad [ada-asia](https://ada-asia.com/) as Data Insights
 - 🌱 I’m currently learning Deep learning
