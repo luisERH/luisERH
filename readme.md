@@ -77,7 +77,7 @@ Formado em análise e desenvolvimento de sistemas, possuo experiência sólida n
 </p>
 
 
-<strong>🔭 you can start from here ...</strong>
+<strong>🔭 Você pode começar por aqui ...</strong>
 
 <a href="https://github.com/luisERH/Dominando-Pandas"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=luisERH&repo=Dominando-Pandas" width=400> </a> 
 <a href="https://github.com/luisERH/Analise-de-Twitters"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=luisERH&repo=Analise-de-Twitters" width=400> </a> 
