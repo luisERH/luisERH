@@ -9,17 +9,14 @@ Formado em análise e desenvolvimento de sistemas, possuo experiência sólida n
 <br>
 <img align="right" src="https://github.com/luisERH/ImageCloud/blob/main/wordcloud.png" width="400px" />
 
-- 🔭 I’m currently working on ad [ada-asia](https://ada-asia.com/) as Data Insights
-- 🌱 I’m currently learning Deep learning
-- 👯 I’m looking to collaborate on PySpark
-- 🤔 I’m looking for help with Data Engineering stuff
-- 💬 Ask me about Python
-- 📫 How to reach me: [zahid_sc@hotmail.fr](zahid_sc@hotmail.fr)
+- 🔭 Atualmente estuando PySpark.
+- 🌱 Procuro me especializar em NLP.
+- 💬 Me adapto paara novas demandas.
+- 📫 Como falar comigo?: [luiseduardorocha.h@gmail.com](luiseduardorocha.h@gmail.com)
 
-[<img src="https://github.com/uannabi/-/blob/master/resource/social/facebook-ar21.svg" height="50em" align="center" alt="Follow Uannabi on Facebook"/>](https://www.facebook.com/zahid.uan/)
-[<img src="https://github.com/uannabi/-/blob/master/resource/social/linkedin-ar21.svg" height="50em" align="center" alt="Follow Uannabi on LinkedIn"/>](https://www.linkedin.com/in/animus/) 
-[<img src="https://github.com/uannabi/-/blob/master/resource/social/stackoverflow-ar21.svg" height="50em" align="center" alt="Follow Uannabi on Stackoverflow"/>](https://stackoverflow.com/users/7875250/zahid-uan-nabi)
-[<img src="https://github.com/uannabi/-/blob/master/resource/social/twitter-ar21.svg" height="50em" align="center" alt="Follow Uannabi on Twitter"/>](https://twitter.com/uan_nabi)
+
+[<img src="https://github.com/uannabi/-/blob/master/resource/social/linkedin-ar21.svg" height="50em" align="center" alt="Siga Luis no LinkedIn"/>](https://www.linkedin.com/in/luiserh/) 
+
 
 ## Experienced with 
 <p align="center" >
