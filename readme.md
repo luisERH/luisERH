@@ -86,6 +86,7 @@ Formado em análise e desenvolvimento de sistemas, possuo experiência sólida n
 - ⚡ Fun fact: ... -->
 <hr>
 
+
 <p align="center">
 <summary>:zap: Github Stats</summary>
 
