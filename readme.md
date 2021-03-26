@@ -1,5 +1,5 @@
 
-<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Que bom que você veio até aqui!</h1>
+<h1><img src="https://github.com/luisERH/ImageCloud/blob/main/wordcloud.png" width="30"/> Que bom que você veio até aqui!</h1>
 
 ### Cientista de dados | Analista de dados |  Dev Python 
 
