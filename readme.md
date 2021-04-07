@@ -9,7 +9,7 @@ Formado em análise e desenvolvimento de sistemas, possuo experiência sólida n
 
 - 🔭 Atualmente estudando PySpark.
 - 🌱 Procuro me especializar em NLP.
-- 💬 Me adapto paara novas demandas.
+- 💬 Me adapto para novas demandas.
 - 📫 Como entrar em contato: [luiseduardorocha.h@gmail.com](luiseduardorocha.h@gmail.com)
 
 
