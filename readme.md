@@ -1,100 +1,133 @@
+<div align="center">
+  
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00D4AA&center=true&vCenter=true&width=500&lines=Luis+Henriques;Cientista+de+Dados+Sênior;Especialista+em+IA+%26+Cloud;NLP+%7C+LLM+%7C+AWS+%7C+GCP)
 
-<h1>:facepunch: Que bom que você veio até aqui!</h1>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/luiserh)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/luisERH)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:luiseduardorocha.h@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5591998151356)
 
-### Cientista de dados | Analista de dados |  Dev Python 
+</div>
 
-Formado em análise e desenvolvimento de sistemas, possuo experiência sólida na linguagem de programação Python, meu foco atuar como cientista de dados, aplicando técnicas de Inteligência Artificial, análise estatística de dados, reconhecimento de padrões e visualização de dados.
-<br>
-<img align="right" src="https://github.com/luisERH/ImageCloud/blob/main/wordcloud.png" width="28%" />
+---
 
-- 🔭 Atualmente estudando PySpark.
-- 🌱 Procuro me especializar em NLP.
-- 💬 Me adapto para novas demandas.
-- 📫 Como entrar em contato: [luiseduardorocha.h@gmail.com](luiseduardorocha.h@gmail.com)
+## 🚀 Sobre mim
 
+> **Cientista de Dados Sênior** com **5+ anos de experiência** especializando em **IA, NLP, LLM e Cloud Computing**. Atuei em empresas como **A3data**, **Indra (Banco do Brasil)**, **Centro de Empreendedorismo da Amazônia** e **Easy Doc**, desenvolvendo soluções que geraram **milhões em retorno financeiro**. Expert em **RAG, Agentes de IA, AWS/GCP** e automação empresarial com foco em resultados de negócio.
 
-[<img src="https://github.com/uannabi/-/blob/master/resource/social/linkedin-ar21.svg" height="50em" align="center" alt="Siga Luis no LinkedIn"/>](https://www.linkedin.com/in/luiserh/) 
+### 🎯 **Especialidades**
+- 🤖 **Inteligência Artificial**: LLMs, RAG, Multi-Agent Systems, Function Calling
+- ☁️ **Cloud Computing**: AWS (Bedrock, SageMaker, Lambda), GCP, Terraform, Serverless
+- 📊 **Data Science**: Machine Learning, Deep Learning, NLP, Computer Vision
+- 🏗️ **MLOps/LLMOps**: Docker, Kubernetes, CI/CD, LangFuse, DataDog
 
+---
 
-## Experienced with 
-<p align="center" >
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/python-icon.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/dj.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/jp.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/scala.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/plot_ly-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/databricks.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/metabase.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/apple_xcode.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/docker-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/git.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/linux-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/apache_hadoop-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/cloudera-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/gdal-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/redis-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/mongodb-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/sqlite-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/mysql-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/postgresql-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/wordpress-ar21.svg"> </code>
-<code> <img height="50" src="https://github.com/uannabi/-/blob/master/resource/other/surgesh-ar21.svg"> </code>
-</p>
+## 🛠️ **Stack Tecnológico**
 
-###  <code> <img height="70" src="https://github.com/uannabi/-/blob/master/resource/google_cloud-ar21.svg"> </code>
-<p align="Center">
-<code><img height="50" src="https://github.com/uannabi/-/blob/master/resource/google_appengine-ar21.svg"> </code>
-<code><img height="50" src="https://github.com/uannabi/-/blob/master/resource/google_maps.svg"> </code>
-<code><img height="50" src="https://github.com/uannabi/-/blob/master/resource/google_bigquery.svg"> </code>
-<code><img height="50" src="https://github.com/uannabi/-/blob/master/resource/google_admob.svg"> </code>
+<div align="center">
 
-</p>
+### **Linguagens & Frameworks**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
 
-### <code> <img height="70" src="https://github.com/uannabi/-/blob/master/resource/amazon_aws-ar21.svg"> </code>
+### **Cloud & DevOps**
+![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)
+![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 
-<p align="center">
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/ec2.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/emr.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/athena.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/c9.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/lambda.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/loadBalancer.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/rds.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/redis.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/redshift.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/sagemaker.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/rekognition.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/route53.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/s3.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/sns.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/sqs.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/vpc.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/cloudfront.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/cw.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/apigateway.svg"> </code>
-<code> <img height="80" src="https://github.com/uannabi/-/blob/master/resource/awsN/lex.svg"> </code>
+### **IA & Machine Learning**
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square)
+![LangChain](https://img.shields.io/badge/🦜_LangChain-121212?style=flat-square)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-CC785C?style=flat-square)
 
-</p>
+### **Bancos de Dados & Big Data**
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![BigQuery](https://img.shields.io/badge/BigQuery-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apache-spark&logoColor=white)
+![Hadoop](https://img.shields.io/badge/Apache_Hadoop-66CCFF?style=flat-square&logo=apache-hadoop&logoColor=black)
 
+</div>
 
-<strong>🔭 Você pode começar por aqui ...</strong>
+---
 
-<a href="https://github.com/luisERH/Dominando-Pandas"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=luisERH&repo=Dominando-Pandas" width=400> </a> 
-<a href="https://github.com/luisERH/Analise-de-Twitters"> <img src="https://github-readme-stats.vercel.app/api/pin/?username=luisERH&repo=Analise-de-Twitters" width=400> </a> 
+## 📊 **Estatísticas do GitHub**
 
-<!-- - 😄 Pronouns: ...
-- ⚡ Fun fact: ... -->
-<hr>
+<div align="center">
+  
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=luisERH&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luisERH&layout=compact&langs_count=8&theme=tokyonight"/>
+<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=luisERH&theme=tokyonight&hide_border=false"/>
 
+</div>
 
-<p align="center">
-<summary>:zap: Github Stats</summary>
+---
 
-<img src="https://github-readme-stats.codestackr.vercel.app/api?username=luisERH&show_icons=true" />
-</p>
+## 💼 **Trajetória Profissional**
 
+### 🎯 **A3data (Stellantis & Grupo Elfa)** | *Cientista de Dados Sênior (NLP - LLM)* | `Abr 2024 - Atual`
+- 🚀 **COTAI**: Sistema proprietário GenAI que gerou **R$ 100 milhões em vendas** em 8 meses
+- 📈 Elevou taxa de resposta de cotações de **30% → 70%** com automação via Amazon Bedrock
+- 🎯 Sistema De/Para de produtos: **14% → 78%** de representatividade usando NLP e similaridade
+- 📰 Monitoramento inteligente de notícias com **BerTopic + GPT-3.5** para insights estratégicos
 
+### 🏦 **Indra (Banco do Brasil)** | *Cientista de Dados Pleno* | `Set 2021 - Mar 2024`
+- 🛡️ Detecção de fraudes: **50% → 79%** de precisão, reduzindo perdas em milhões
+- 👥 Categorizador financeiro NLP para **50+ milhões de clientes**
+- 📈 Análise de churn: **+20% retenção** e **-10% custos de aquisição**
+- ⚖️ Substituição de motor de regras por IA explicável para concessão de crédito
 
+### 🌱 **Centro de Empreendedorismo da Amazônia** | *Analista de Dados* | `Mai 2021 - Ago 2021`
+- 🗺️ Análises geoespaciais e geoprocessamento para conservação ambiental
+- 📊 Web scraping e visualizações para projetos de sustentabilidade
+- 🔍 Recuperação de informação para insights de desenvolvimento regional
 
+### 🚛 **Easy Doc Soluções Integradas** | *Cientista de Dados* | `Jun 2020 - Abr 2021`
+- 📱 Sistema integrado de processamento de documentos via WhatsApp
+- 🔍 Pipeline completo: **OCR + YoloV4 + NER + Cloud Storage**
+- 🤖 Bot automatizado para caminhoneiros com melhoria significativa na eficiência
 
-     
+### 💻 **Freelancer.com** | *Desenvolvedor de Dados* | `Abr 2019 - Nov 2020`
+- 🌐 Algoritmos de web scraping e PLN para clientes internacionais
+- ☁️ Microserviços em AWS Lambda e Google Cloud Platform
+- 🔧 Soluções inovadoras em processamento de dados e automação
+
+---
+
+## 🎓 **Formação & Certificações**
+
+### **Educação**
+- 🎓 **Pós-Graduação em Ciência de Dados** | Cruzeiro do Sul Virtual | `2024 - Atual`
+- 💻 **Tecnólogo em Análise e Desenvolvimento de Sistemas** | IFPA | `2017 - 2021`
+
+### **Certificações Especializadas**
+- 🤖 **IA Generativa e LLMs para NLP** | Data Science Academy | `2024`
+- 📊 **Formação Cientista de Dados** | Data Science Academy | `2023`
+- 🏗️ **Big Data Science** | Semantix | `2022`
+- 💡 **Santander Coders | Data Science** | Ada Tech | `2022`
+
+---
+
+<div align="center">
+
+### 🌟 **"Transformando dados em soluções que geram impacto real nos negócios"**
+
+![Profile views](https://komarev.com/ghpvc/?username=luisERH&color=0e75b6&style=flat)
+[![GitHub followers](https://img.shields.io/github/followers/luisERH?label=Followers&style=social)](https://github.com/luisERH)
+
+---
+
+💡 **Disponível para oportunidades em Data Science, IA e Cloud Computing**
+
+</div>
