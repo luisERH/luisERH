@@ -1,173 +1,137 @@
-# Claude para Alexa+ (add-on MCP)
+# alexa-mcp
 
-Servidor MCP que coloca o **Claude dentro da sua Alexa**. Ele fala o protocolo esperado pelo
-[Alexa+ MCP Toolkit](https://developer.amazon.com/docs/alexaplus/add-ons/mcp-toolkit-overview.html):
-**Streamable HTTP**, **OAuth 2.1 (authorization code + PKCE S256)** e descoberta via
-*OAuth Protected Resource Metadata*. O Alexa+ é o **cliente** MCP; este repositório é o **servidor**.
+Servidor MCP que dá ao **Claude o controle da sua Alexa**: falar nos Echos, mandar comandos de
+voz, rodar rotinas, acender luz, mexer nas listas e criar lembretes — tudo por conversa, sem
+chave de API.
 
 ```
-  "Alexa, pergunta pro Claude ..."
-            │
-            ▼
-   ┌──────────────────┐   OAuth 2.1 + PKCE    ┌─────────────────────────┐   Messages API   ┌────────┐
-   │  Alexa+ (client) │ ────────────────────▶ │ este servidor (/mcp)    │ ───────────────▶ │ Claude │
-   │  orquestrador    │ ◀──────────────────── │ ask_claude, conversas   │ ◀─────────────── │        │
-   └──────────────────┘   Streamable HTTP     └─────────────────────────┘                  └────────┘
+  você  ──▶  Claude (Desktop / Code)  ──MCP/stdio──▶  alexa-mcp  ──▶  conta Amazon  ──▶  seus Echos
 ```
 
-## Ferramentas expostas
+## O que dá para pedir
 
-| Ferramenta | O que faz |
+| Ferramenta | Para quê |
 |---|---|
-| `ask_claude(question, conversation_id?)` | Manda a pergunta ao Claude e devolve a resposta **já formatada para fala**: sem markdown, sem URLs, sem blocos de código, cortada numa fronteira de frase. Devolve um `conversation_id`. |
-| `list_conversations(limit)` | Lista as conversas recentes ("o que eu perguntei pro Claude hoje?"). |
-| `get_conversation(conversation_id, limit)` | Relê as últimas mensagens de uma conversa. |
+| `list_devices` | Echos da conta, com volume, online e "não perturbe" |
+| `speak` | Falar um texto no Echo (anúncio, fala direta ou SSML) |
+| `send_voice_command` | Mandar qualquer frase como se você tivesse falado ("toque jazz na sala") |
+| `set_volume`, `control_playback` | Volume e play/pause/próxima/anterior |
+| `set_do_not_disturb` | Não perturbe, num aparelho ou em todos |
+| `rename_device` | Renomear um Echo |
+| `list_routines`, `run_routine` | Ver e executar as rotinas que você já criou |
+| `list_smarthome_devices`, `list_smarthome_groups` | Aparelhos e cômodos da casa inteligente |
+| `get_smarthome_state`, `control_smarthome_device` | Estado e acionamento (liga, desliga, brilho, cor, temperatura) |
+| `get_lists`, `get_list_items`, `add_list_item` | Listas de compras e tarefas |
+| `list_notifications`, `create_reminder`, `cancel_notification` | Alarmes, timers e lembretes |
 
-O contexto é mantido em SQLite: passar o `conversation_id` de volta em `ask_claude` continua o
-assunto; sem ele, começa uma conversa nova.
+Nomes com acento e caixa diferente funcionam: "sala de estar" acha o "Sala de Estar". Quando o
+nome casa com mais de um aparelho, a ferramenta devolve as opções em vez de chutar.
 
-## Requisitos
-
-- Python 3.11+
-- Uma **chave da API da Anthropic** (`ANTHROPIC_API_KEY`) — [console.anthropic.com](https://console.anthropic.com)
-- Conta de desenvolvedor Amazon com acesso ao **Alexa+ for Builders**
-- Uma URL pública HTTPS para o servidor (em desenvolvimento, um túnel como `cloudflared` resolve)
-
-> **Disponibilidade:** o MCP Toolkit do Alexa+ está disponível **nos Estados Unidos**. Fora dos EUA
-> o servidor roda e pode ser testado normalmente (MCP Inspector, Claude Code, Claude Desktop), mas a
-> publicação do add-on depende da liberação do Alexa+ na sua região.
-
-## Início rápido
+## Instalação
 
 ```bash
 git clone https://github.com/luisERH/alexa-mcp.git
 cd alexa-mcp
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-
-cp .env.example .env
-# edite .env: ANTHROPIC_API_KEY, ALEXA_MCP_LOGIN_PASSWORD e ALEXA_MCP_PUBLIC_URL
-python -m alexa_claude_mcp
+npm install
+npm run build
 ```
 
-Em outro terminal, exponha o servidor:
+Precisa de Node 20+.
+
+### 1. Entrar na sua conta Amazon
+
+A API que o app Alexa usa é **privada**: não existe chave de API, o que existe é a sessão do
+aplicativo. O login é feito uma vez, no seu navegador, por um proxy local:
 
 ```bash
-cloudflared tunnel --url http://127.0.0.1:8080
-# copie a URL https://....trycloudflare.com para ALEXA_MCP_PUBLIC_URL no .env e reinicie
+npm run auth
 ```
 
-`ALEXA_MCP_PUBLIC_URL` precisa ser exatamente a URL pública: ela vira o *issuer* OAuth, o
-identificador do recurso e a base do redirecionamento de login. Se ela estiver errada, o Alexa+
-conclui o login e depois recusa o token.
+Abra `http://127.0.0.1:3456`, entre com a sua conta Amazon (2FA funciona — é a página real da
+Amazon) e pronto. A sessão fica em `~/.alexa-mcp/auth.json`, com permissão `0600`, e é renovada
+sozinha enquanto o servidor roda.
 
-Verifique:
+> Abra o proxy num computador **sem o app Alexa instalado** no mesmo dispositivo, e use exatamente
+> a URL acima — se o endereço não bater com `ALEXA_PROXY_HOST`, a Amazon mostra a página de QR
+> code em vez do login.
+
+### 2. Ligar ao Claude
+
+Claude Code:
 
 ```bash
-curl -s https://SEU-DOMINIO/healthz
-curl -s https://SEU-DOMINIO/.well-known/oauth-protected-resource/mcp
+claude mcp add alexa -- node /caminho/completo/para/alexa-mcp/dist/index.js
 ```
 
-## Conectando ao Alexa+
+Claude Desktop — em `claude_desktop_config.json`:
 
-1. Deixe o servidor rodando atrás da URL pública HTTPS.
-2. No [Alexa+ for Builders](https://developer.amazon.com/alexaplus/), crie um add-on MCP e informe
-   a URL do endpoint: `https://SEU-DOMINIO/mcp`.
-3. O onboarding é feito pela **Alexa AI CLI** — siga o
-   [QuickStart oficial](https://developer.amazon.com/docs/alexaplus/add-ons/mcp-toolkit-quickstart.html),
-   que é a fonte de verdade para os comandos e para o formato do manifesto.
-4. Quando o Alexa+ abrir a tela de autorização, digite a senha de `ALEXA_MCP_LOGIN_PASSWORD`.
-   É esse passo que liga a sua conta Alexa a este servidor.
-5. Teste na Alexa: *"Alexa, pergunta pro Claude o que é um vetor de embeddings."*
-
-O servidor implementa **Dynamic Client Registration** (RFC 7591), então o Alexa+ se registra
-sozinho. Se o console pedir `client_id`/`client_secret` fixos, preencha
-`ALEXA_MCP_STATIC_CLIENT_ID`, `ALEXA_MCP_STATIC_CLIENT_SECRET` e `ALEXA_MCP_STATIC_REDIRECT_URIS`.
-
-### Testando antes de publicar
-
-Qualquer cliente MCP com suporte a OAuth serve para validar o servidor sem depender da
-certificação da Amazon:
-
-```bash
-npx @modelcontextprotocol/inspector
-# transporte: Streamable HTTP · URL: https://SEU-DOMINIO/mcp
+```json
+{
+  "mcpServers": {
+    "alexa": {
+      "command": "node",
+      "args": ["/caminho/completo/para/alexa-mcp/dist/index.js"],
+      "env": { "ALEXA_DEFAULT_DEVICE": "Sala de Estar" }
+    }
+  }
+}
 ```
 
-Também dá para adicionar como conector remoto no Claude (Desktop ou Code) apontando para a mesma URL.
-
-## Endpoints
-
-| Rota | Função |
-|---|---|
-| `POST/GET/DELETE /mcp` | Endpoint MCP (Streamable HTTP), protegido por Bearer token |
-| `/.well-known/oauth-protected-resource/mcp` | RFC 9728 — diz quem emite os tokens |
-| `/.well-known/oauth-authorization-server` | RFC 8414 — metadados do servidor de autorização |
-| `/register` | RFC 7591 — registro dinâmico de cliente |
-| `/authorize`, `/token`, `/revoke` | Fluxo OAuth 2.1 (authorization code + PKCE S256) |
-| `/login` | Tela de consentimento (senha do add-on) |
-| `/healthz` | Health check |
+Depois é só conversar: *"quais Echos eu tenho?"*, *"anuncia na sala que o jantar tá pronto"*,
+*"roda a rotina de boa noite"*, *"põe café na lista de compras"*.
 
 ## Configuração
 
-| Variável | Obrigatória | Padrão | Descrição |
-|---|---|---|---|
-| `ANTHROPIC_API_KEY` | sim | — | Chave da API da Anthropic |
-| `ALEXA_MCP_PUBLIC_URL` | sim | — | URL pública HTTPS do servidor (sem barra final) |
-| `ALEXA_MCP_LOGIN_PASSWORD` | sim | — | Senha da tela de consentimento (mín. 12 caracteres) |
-| `ANTHROPIC_MODEL` | não | `claude-sonnet-5` | Modelo usado nas respostas |
-| `ANTHROPIC_MAX_TOKENS` | não | `1024` | Teto de tokens por resposta |
-| `ALEXA_MCP_LANGUAGE` | não | `pt-BR` | Idioma padrão das respostas |
-| `ALEXA_MCP_MAX_SPOKEN_CHARS` | não | `600` | Tamanho máximo da resposta falada |
-| `ALEXA_MCP_HISTORY_TURNS` | não | `12` | Mensagens de histórico enviadas ao Claude |
-| `ALEXA_MCP_DB_PATH` | não | `data/alexa_mcp.sqlite3` | Banco SQLite |
-| `ALEXA_MCP_HOST` / `ALEXA_MCP_PORT` | não | `127.0.0.1` / `8080` | Bind local |
-| `ALEXA_MCP_ACCESS_TOKEN_TTL` | não | `3600` | Validade do access token (s) |
-| `ALEXA_MCP_REFRESH_TOKEN_TTL` | não | `2592000` | Validade do refresh token (s) |
-| `ALEXA_MCP_ALLOWED_REDIRECT_HOSTS` | não | domínios Amazon + localhost | Hosts aceitos em `redirect_uri` |
-| `ALEXA_MCP_STATIC_CLIENT_ID` / `_SECRET` / `_REDIRECT_URIS` | não | — | Cliente OAuth fixo, quando não há registro dinâmico |
+Tudo por variável de ambiente; os padrões são para uma conta brasileira.
+
+| Variável | Padrão | Para quê |
+|---|---|---|
+| `ALEXA_MCP_AUTH_FILE` | `~/.alexa-mcp/auth.json` | Onde a sessão fica salva |
+| `ALEXA_AMAZON_PAGE` | `amazon.com.br` | Marketplace da sua conta |
+| `ALEXA_SERVICE_HOST` | `pitangui.amazon.com` | Host do serviço Alexa da região |
+| `ALEXA_ACCEPT_LANGUAGE` | `pt-BR` | Idioma do login e das chamadas |
+| `ALEXA_DEFAULT_DEVICE` | — | Echo usado quando você não diz qual |
+| `ALEXA_PROXY_HOST` / `ALEXA_PROXY_PORT` | `127.0.0.1` / `3456` | Proxy do login |
+| `ALEXA_REQUEST_TIMEOUT_MS` | `30000` | Timeout de cada chamada |
+| `ALEXA_COOKIE_REFRESH_INTERVAL` | `345600000` (4 dias) | Renovação da sessão; `0` desliga |
+
+Conta de outro país? Os pares mais comuns são `amazon.com` + `pitangui.amazon.com`,
+`amazon.com.br` + `pitangui.amazon.com`, `amazon.de` (e demais da Europa) + `layla.amazon.de`,
+`amazon.co.jp` + `alexa.amazon.co.jp`.
 
 ## Segurança
 
-- **PKCE S256 obrigatório**; código de autorização de uso único, com validade de 5 minutos.
-- **Refresh token rotativo**: o token apresentado é invalidado a cada troca.
-- **Tokens guardados como hash SHA-256** — o arquivo do banco não contém credencial utilizável.
-- **Allowlist de `redirect_uri`**: o registro dinâmico é aberto, então o host do redirecionamento é
-  a barreira contra um cliente hostil se registrar e desviar o código. Só `https` (exceto localhost).
-- **Proteção contra DNS rebinding** nos headers `Host`/`Origin` do endpoint MCP.
-- **Limite de tentativas** na tela de login e comparação de senha em tempo constante.
-- Rode sempre atrás de HTTPS. A senha do add-on é a única coisa entre a internet e a sua chave da
-  Anthropic: use uma senha longa e única.
+- `~/.alexa-mcp/auth.json` **vale o mesmo que a sua senha da Amazon**: é gravado só para o seu
+  usuário (`0600`, diretório `0700`) e nunca deve ir para o git nem para backup em nuvem sem
+  criptografia.
+- O servidor fala por stdio com o Claude no seu computador — nada é exposto na rede.
+- Nenhuma ferramenta apaga dispositivo, grupo ou conta. O que existe é controle e configuração.
+- Para revogar o acesso: apague o arquivo de sessão e saia dos dispositivos conectados em
+  *Amazon → Sua conta → Dispositivos registrados*.
+
+## Como isto funciona (e o que pode quebrar)
+
+Por baixo está o [alexa-remote2](https://github.com/Apollon77/alexa-remote), que conversa com a
+mesma API privada que o app Alexa usa. Isso tem consequências que vale saber:
+
+- **Não é uma API oficial.** A Amazon pode mudar qualquer endpoint sem aviso; quando isso
+  acontece, a correção vem de uma atualização do `alexa-remote2`.
+- **A sessão expira.** Normalmente ela se renova sozinha; quando não der, rode `npm run auth` de novo.
+- **Criar rotinas não dá.** A API expõe listar e executar rotinas; a criação continua no app
+  Alexa. Para o resto, `send_voice_command` costuma resolver — é literalmente falar com a Alexa.
+- Um add-on oficial existe pelo [Alexa+ MCP Toolkit](https://developer.amazon.com/docs/alexaplus/add-ons/mcp-toolkit-overview.html),
+  mas ele é o caminho inverso (a Alexa chamando um servidor seu) e está disponível nos EUA.
 
 ## Desenvolvimento
 
 ```bash
-pytest          # suíte completa: fluxo OAuth ponta a ponta + chamadas MCP reais
-ruff check .
+npm test        # 52 testes, com um duplo do alexa-remote2 — nada de rede
+npm run typecheck
+npm run build
 ```
 
-Os testes sobem o app ASGI de verdade, executam o fluxo `register → authorize → login → token`,
-abrem uma sessão MCP com o Bearer token e chamam as ferramentas. A API da Anthropic é substituída
-por um cliente falso, então nada de rede e nenhum custo.
-
-### Docker
-
-```bash
-docker build -t alexa-claude-mcp .
-docker run --rm -p 8080:8080 --env-file .env -v "$PWD/data:/app/data" alexa-claude-mcp
-```
-
-Para produção, qualquer host que sirva ASGI com HTTPS funciona (ECS/Fargate, Cloud Run, Fly.io,
-uma VM com nginx). Em Lambda, use um adaptador ASGI e troque o SQLite por armazenamento durável —
-o *streaming* do MCP pede conexão longa, então Fargate/Cloud Run é o caminho mais direto.
-
-## Limitações conhecidas
-
-- O SQLite fica no disco local: em vários contêineres, use volume compartilhado ou troque a camada
-  de `storage.py` por Postgres/DynamoDB.
-- Um único dono (uma senha). Multiusuário exigiria um IdP de verdade (Cognito, Auth0) no lugar da
-  tela de senha.
-- Sem conteúdo visual: as respostas são só de voz. Telas exigiriam o padrão **MCP Apps**.
+Os testes cobrem a resolução de nomes (acento, caixa, ambiguidade), o tratamento de erro de cada
+ferramenta e os argumentos exatos passados para a API da Amazon.
 
 ## Licença
 

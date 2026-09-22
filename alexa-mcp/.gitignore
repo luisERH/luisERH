@@ -1,12 +1,6 @@
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-.env
-data/
-*.sqlite3
-.pytest_cache/
-.ruff_cache/
+node_modules/
 dist/
-build/
-*.egg-info/
+*.log
+.env
+auth.json
+.DS_Store
